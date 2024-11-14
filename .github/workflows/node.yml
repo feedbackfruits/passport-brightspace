@@ -1,21 +1,25 @@
 name: node
+
 on: [push]
+
+env:
+  NODE_VERSION: '20'
+
 jobs:
   test:
     runs-on: ubuntu-latest
     env:
       NODE_ENV: test
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v4
+      - name: Enable corepack
+        run: corepack enable
+      - uses: actions/setup-node@v4
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - run: npm install
-      - run: npm test
-      - uses: codecov/codecov-action@v1
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
+      - run: yarn
+      - run: yarn test:cov
+      - uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
