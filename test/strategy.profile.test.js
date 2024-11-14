@@ -1,11 +1,7 @@
-/* global describe, it, expect, before */
-/* jshint expr: true */
-
-var BrightspaceStrategy = require('../lib/strategy');
-
+const BrightspaceStrategy = require('../lib/strategy');
+const { expect } = require('chai');
 
 describe('Strategy#userProfile', function() {
-
   var strategy =  new BrightspaceStrategy({
       host: 'https://api.brightspace.im',
       clientID: 'ABC123',
@@ -77,5 +73,4 @@ describe('Strategy#userProfile', function() {
       expect(profile).to.be.undefined;
     });
   });
-
 });

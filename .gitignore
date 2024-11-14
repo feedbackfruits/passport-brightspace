@@ -1,13 +1,18 @@
-build/
-reports/
-
-# Node.js
-node_modules/
+node_modules
+storage/*
+!storage/.gitkeep
 npm-debug.log
-
-# Mac OS X
 .DS_Store
-
-# nyc
 .nyc_output
 coverage
+/*.env
+.kube/**/secret.yml
+dist
+.vscode/
+.migrations
+assets.json
+yarn-error.log
+*.vtt
+tmp
+.yarn/*
+dry-run.log

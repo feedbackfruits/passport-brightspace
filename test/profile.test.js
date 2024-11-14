@@ -1,12 +1,8 @@
-/* global describe, it, expect, before */
-/* jshint expr: true */
-
-var fs = require('fs')
-  , parse = require('../lib/profile').parse;
-
+const { expect } = require('chai');
+const fs = require('fs');
+const parse = require('../lib/profile').parse;
 
 describe('profile.parse', function() {
-
   describe('example profile', function() {
     var profile;
 
@@ -23,5 +19,4 @@ describe('profile.parse', function() {
       expect(profile.displayName).to.equal('monalisa octocat');
     });
   });
-
 });

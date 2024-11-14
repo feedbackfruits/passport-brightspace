@@ -1,19 +1,15 @@
-/* global describe, it, expect */
-/* jshint expr: true */
-
-var BrightspaceStrategy = require('../lib/strategy');
-
+const BrightspaceStrategy = require('../lib/strategy');
+const { expect } = require('chai');
 
 describe('Strategy', function() {
-
-  var strategy = new BrightspaceStrategy({
+  const strategy = new BrightspaceStrategy({
       clientID: 'ABC123',
       clientSecret: 'brightspace'
     },
-    function() {});
+    function() {}
+  );
 
   it('should be named brightspace', function() {
     expect(strategy.name).to.equal('brightspace');
   });
-
 });

@@ -1,10 +1,10 @@
 {
   "name": "passport-brightspace",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Brightspace authentication strategy for Passport.",
   "scripts": {
-    "test": "nyc make test",
-    "coverage": "codecov"
+    "test": "mocha 'test/*.test.js'",
+    "test:cov": "nyc mocha 'test/*.test.js'"
   },
   "keywords": [
     "passport",
@@ -28,15 +28,16 @@
   "license": "MIT",
   "main": "./lib",
   "dependencies": {
-    "passport-oauth2": "1.x.x",
-    "querystring": "^0.2.0"
+    "passport-oauth2": "1.8.0",
+    "querystring": "0.2.1"
   },
   "devDependencies": {
-    "chai": "1.x.x",
-    "mocha": "1.x.x",
-    "nyc": "^11.9.0"
+    "chai": "4.5.0",
+    "mocha": "10.8.2",
+    "nyc": "17.1.0"
   },
   "engines": {
-    "node": ">= 0.8.0"
-  }
+    "node": "20.*"
+  },
+  "packageManager": "yarn@4.5.0"
 }
