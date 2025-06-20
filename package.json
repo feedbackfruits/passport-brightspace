@@ -4,8 +4,8 @@
   "description": "Brightspace authentication strategy for Passport.",
   "scripts": {
     "build": "tsc",
-    "test": "mocha 'test/*.test.js'",
-    "test:cov": "nyc mocha 'test/*.test.js'",
+    "test": "ts-mocha 'test/*.test.ts'",
+    "test:cov": "nyc ts-mocha 'test/*.test.ts'",
     "prepublish": "yarn build"
   },
   "keywords": [
@@ -35,6 +35,10 @@
   "devDependencies": {
     "@feedbackfruits/eslint-config": "2.0.1",
     "@feedbackfruits/tsconfig": "1.0.2",
+    "@istanbuljs/nyc-config-typescript": "1.0.2",
+    "@types/chai": "5.2.2",
+    "@types/expect": "24.3.2",
+    "@types/mocha": "10.0.10",
     "@types/passport-oauth2": "1.4.17",
     "@typescript-eslint/eslint-plugin": "8.34.1",
     "@typescript-eslint/parser": "8.34.1",
@@ -45,6 +49,9 @@
     "nyc": "17.1.0",
     "passport": "^0.7.0",
     "sinon": "^21.0.0",
+    "ts-mocha": "11.1.0",
+    "ts-node": "10.9.2",
+    "tsconfig-paths": "4.2.0",
     "typescript": "5.8.3"
   },
   "engines": {

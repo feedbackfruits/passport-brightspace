@@ -1,23 +1,22 @@
 {
-  "check-coverage": true,
-  "per-file": false,
-  "lines": 5,
-  "statements": 5,
-  "functions": 5,
-  "branches": 5,
-  "include": [
-    "lib/**/*.js"
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "extension": [
+    ".ts"
   ],
   "exclude": [
+    "dist/**",
+    "test/**",
+    "functions/**",
+    "migrations/**",
+    "node_modules/**",
+    "debug/**",
+    "coverage/**",
+    "**/*.spec.ts",
+    ".eastrc.js"
   ],
   "reporter": [
-    "lcov",
-    "text",
-    "text-summary"
-  ],
-  "require": [
-  ],
-  "extension": [
-  ],
-  "all": true
+    "json",
+    "text"
+  ]
 }

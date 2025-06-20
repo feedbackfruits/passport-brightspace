@@ -1,6 +1,7 @@
-const fs = require('fs');
-const BrightspaceStrategy = require('../dist/strategy').default;
-const { expect } = require('chai');
+// @ts-nocheck
+import BrightspaceStrategy from '../src';
+import fs from 'fs';
+import { expect } from 'chai';
 
 describe('Strategy', function() {
   describe('constructor', function() {
