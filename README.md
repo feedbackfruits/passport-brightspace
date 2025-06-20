@@ -3,7 +3,7 @@
 [![codecov](https://codecov.io/gh/feedbackfruits/passport-brightspace/branch/master/graph/badge.svg)](https://codecov.io/gh/feedbackfruits/passport-brightspace)
 
 > [!IMPORTANT]
-> Media now require yarn v4+, make sure to upgrade your local yarn by running `corepack enable`
+> This repo now requires yarn v4+, make sure to upgrade your local yarn by running `corepack enable`. You may also need to run `yarn install` to install the correct dependencies.
 
 [Passport](http://passportjs.org/) strategy for authenticating with [Brightspace](http://docs.valence.desire2learn.com/reference.html)
 using the OAuth 2.0 API.
@@ -16,9 +16,9 @@ unobtrusively integrated into any application or framework that supports
 
 ## Install
 ```sh
-npm install passport-brightspace
+npm install https://github.com/feedbackfruits/passport-brightspace
 # or
-yarn add passport-brightspace
+yarn add https://github.com/feedbackfruits/passport-brightspace
 ```
 
 ## Usage
@@ -54,21 +54,21 @@ For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
 ```js
-    app.get('/auth/brightspace',
-      passport.authenticate('brightspace', { }));
+app.get('/auth/brightspace',
+  passport.authenticate('brightspace', { }));
 
-    app.get('/auth/brightspace/callback',
-      passport.authenticate('brightspace', { failureRedirect: '/login' }),
-      function(req, res) {
-        // Successful authentication, redirect home.
-        res.redirect('/');
-      });
+app.get('/auth/brightspace/callback',
+  passport.authenticate('brightspace', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
 ```
 
 ## Tests
 
 ```sh
-yarn
+yarn install
 yarn test
 ```
 

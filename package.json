@@ -1,10 +1,12 @@
 {
   "name": "passport-brightspace",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Brightspace authentication strategy for Passport.",
   "scripts": {
+    "build": "tsc",
     "test": "mocha 'test/*.test.js'",
-    "test:cov": "nyc mocha 'test/*.test.js'"
+    "test:cov": "nyc mocha 'test/*.test.js'",
+    "prepublish": "yarn build"
   },
   "keywords": [
     "passport",
@@ -26,15 +28,24 @@
     "url": "http://github.com/feedbackfruits/passport-brightspace/issues"
   },
   "license": "MIT",
-  "main": "./lib",
+  "main": "./dist",
   "dependencies": {
-    "passport-oauth2": "1.8.0",
-    "querystring": "0.2.1"
+    "passport-oauth2": "1.8.0"
   },
   "devDependencies": {
-    "chai": "4.5.0",
-    "mocha": "10.8.2",
-    "nyc": "17.1.0"
+    "@feedbackfruits/eslint-config": "2.0.1",
+    "@feedbackfruits/tsconfig": "1.0.2",
+    "@types/passport-oauth2": "1.4.17",
+    "@typescript-eslint/eslint-plugin": "8.34.1",
+    "@typescript-eslint/parser": "8.34.1",
+    "chai": "5.2.0",
+    "eslint": "9.29.0",
+    "eslint-plugin-import": "2.31.0",
+    "mocha": "11.7.0",
+    "nyc": "17.1.0",
+    "passport": "^0.7.0",
+    "sinon": "^21.0.0",
+    "typescript": "5.8.3"
   },
   "engines": {
     "node": "20.*"
