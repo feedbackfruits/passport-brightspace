@@ -1,6 +1,7 @@
-const passport = require('passport');
-const BrightspaceStrategy = require('../dist/strategy').default;
-const { expect, assert } = require('chai');
+// @ts-nocheck
+import BrightspaceStrategy from '../src';
+import passport from 'passport';
+import { expect, assert } from 'chai';
 
 describe('Strategy Integration with Passport', function() {
   beforeEach(function() {

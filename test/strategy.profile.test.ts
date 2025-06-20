@@ -1,5 +1,6 @@
-const BrightspaceStrategy = require('../dist/strategy').default;
-const { expect, assert } = require('chai');
+// @ts-nocheck
+import BrightspaceStrategy from '../src';
+import { expect, assert } from 'chai';
 
 describe('Strategy#userProfile', function () {
   var strategy = new BrightspaceStrategy({
