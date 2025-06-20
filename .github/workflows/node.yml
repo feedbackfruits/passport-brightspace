@@ -19,6 +19,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'yarn'
       - run: yarn
+      - run: yarn build
       - run: yarn test:cov
       - uses: codecov/codecov-action@v3
         with:
