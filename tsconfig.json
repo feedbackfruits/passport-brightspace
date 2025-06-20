@@ -1,0 +1,34 @@
+{
+  "extends": "@feedbackfruits/tsconfig",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "sourceMap": true,
+    "exactOptionalPropertyTypes": false,
+    "strictNullChecks": false,
+    "noImplicitUseStrict": false,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "noImplicitReturns": false,
+    "types": [
+      "node"
+    ]
+  },
+  "exclude": [
+    "test/**/*.ts",
+    "node_modules",
+    "test",
+    "dist"
+  ],
+  "compileOnSave": true,
+  "buildOnSave": false
+}

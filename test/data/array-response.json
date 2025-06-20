@@ -1,0 +1,13 @@
+[
+  {
+    "Identifier": "456",
+    "FirstName": "Array",
+    "LastName": "User",
+    "Email": "array.user@brightspace.com"
+  },
+  {
+    "Identifier": "789",
+    "FirstName": "Second",
+    "LastName": "User"
+  }
+]
