@@ -30,7 +30,7 @@
     "url": "http://github.com/feedbackfruits/passport-brightspace/issues"
   },
   "license": "MIT",
-  "main": "./src",
+  "main": "./dist",
   "dependencies": {
     "passport-oauth2": "1.8.0"
   },

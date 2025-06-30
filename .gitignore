@@ -7,7 +7,6 @@ npm-debug.log
 coverage
 /*.env
 .kube/**/secret.yml
-dist
 .vscode/
 .migrations
 assets.json
