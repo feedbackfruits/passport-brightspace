@@ -10,7 +10,8 @@ export default [
       'import/no-named-as-default-member': 0,
       '@typescript-eslint/no-empty-object-type': 0,
       '@typescript-eslint/no-unused-vars': 0,
-      '@typescript-eslint/no-require-imports': 0
+      '@typescript-eslint/no-require-imports': 0,
+      '@typescript-eslint/no-explicit-any': 0
     }
   }
 ];
