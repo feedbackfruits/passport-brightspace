@@ -1,6 +1,6 @@
 {
   "name": "passport-brightspace",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "description": "Brightspace authentication strategy for Passport.",
   "scripts": {
     "lint": "eslint \"./src/**/*.ts\" --max-warnings 200",

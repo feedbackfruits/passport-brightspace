@@ -36,13 +36,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const passport_oauth2_1 = __importStar(require("passport-oauth2"));
 class Strategy extends passport_oauth2_1.default {
     constructor(options, verify) {
-        options.authorizationURL = options.authorizationURL || `https://auth.brightspace.com/oauth2/auth`;
-        options.tokenURL = options.tokenURL || `https://auth.brightspace.com/core/connect/token`;
+        options.authorizationURL = options.authorizationURL || 'https://auth.brightspace.com/oauth2/auth';
+        options.tokenURL = options.tokenURL || 'https://auth.brightspace.com/core/connect/token';
         options.scopeSeparator = options.scopeSeparator || ' ';
         options.customHeaders = options.customHeaders || {};
         super(options, verify);
         this.options = options;
-        console.log(`Configuring strategy with options:`, this.options);
+        console.log('Configuring strategy with options:', this.options);
         this.name = 'brightspace';
         this._userProfileURL = options.userProfileURL || `${this.options.host}/d2l/api/lp/1.31/users/whoami`;
         this._oauth2.useAuthorizationHeaderforGET(true);
@@ -65,16 +65,16 @@ class Strategy extends passport_oauth2_1.default {
                     actualCallback(error);
                 }
                 else {
-                    var results;
+                    let results;
                     try {
                         results = JSON.parse(data);
                     }
                     catch (e) {
                         results = Object.fromEntries(new URLSearchParams(data.toString()));
                     }
-                    const access_token = results["access_token"];
-                    const refresh_token = results["refresh_token"];
-                    delete results["refresh_token"];
+                    const access_token = results['access_token'];
+                    const refresh_token = results['refresh_token'];
+                    delete results['refresh_token'];
                     callback(null, access_token, refresh_token, results);
                 }
             });
